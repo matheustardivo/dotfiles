@@ -3,6 +3,7 @@
 	email = matheustardivo@gmail.com
 [core]
 	editor = mate -w
+	pager = less -r
 [color]
 	diff = auto
 	status = auto
