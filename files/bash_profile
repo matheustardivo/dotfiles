@@ -2,10 +2,11 @@
 # export PS1='\h:\W \u$(__git_ps1 " (%s)")\$ '
 # export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-alias l='ls -alhG'
+alias l='ls -alh'
 source ~/.git-completion.bash
 
+export CLICOLOR=1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-export PS1='\n[\u@\h \W$(__git_ps1 " (%s)")]\n\$ '
+export PS1='\n\u@\h:\w$(__git_ps1 " (%s)")\n\$ '
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
