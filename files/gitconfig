@@ -4,6 +4,7 @@
 [core]
 	pager = less -r
 	editor = mvim -f --nomru -c 'au VimLeave * !open -a iTerm'
+	excludesfile = /Users/mtardivo/.gitignore_global
 [color]
 	diff = auto
 	status = auto
@@ -20,6 +21,7 @@
 	lg = log --oneline --decorate
 	sb = status -sb
 	dw = diff --word-diff
+	ls = diff HEAD~1..HEAD
 [help]
 	autocorrect = 1
 [branch]
