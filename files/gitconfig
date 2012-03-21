@@ -3,7 +3,7 @@
 	email = matheustardivo@gmail.com
 [core]
 	pager = less -r
-	editor = mvim -f --nomru -c 'au VimLeave * !open -a iTerm'
+	editor = mate -w
 	excludesfile = /Users/mtardivo/.gitignore_global
 [color]
 	diff = auto
