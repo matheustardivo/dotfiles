@@ -1,4 +1,5 @@
 cp files/bash_profile ~/.bash_profile
+cp files/gemrc ~/.gemrc
 cp files/git-completion.bash ~/.git-completion.bash
 cp files/gitconfig ~/.gitconfig
 cp files/gitignore_global ~/.gitignore_global
