@@ -7,4 +7,4 @@ cp files/irbrc ~/.irbrc
 cp files/pryrc ~/.pryrc
 
 source ~/.bash_profile
-open files/matheustardivo.itermcolors
+open files/idleToes.itermcolors
