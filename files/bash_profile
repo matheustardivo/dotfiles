@@ -7,17 +7,17 @@ export LANG=en_US.UTF-8
 
 alias l='ls -alh'
 
-alias start_mongod='mongod -f /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
-alias start_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq start'
-alias stop_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq stop'
-alias start_http='python -m SimpleHTTPServer 8000'
+# alias start_mongod='mongod -f /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
+# alias start_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq start'
+# alias stop_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq stop'
+# alias start_http='python -m SimpleHTTPServer 8000'
 
-alias memcached_load="launchctl load -w /usr/local/Cellar/memcached/1.4.13/homebrew.mxcl.memcached.plist"
-alias memcached_unload="launchctl unload -w /usr/local/Cellar/memcached/1.4.13/homebrew.mxcl.memcached.plist"
-alias mysql_load="launchctl load -w /usr/local/Cellar/mysql/5.5.20/homebrew.mxcl.mysql.plist"
-alias mysql_unload="launchctl unload -w /usr/local/Cellar/mysql/5.5.20/homebrew.mxcl.mysql.plist"
-alias postgres_load="launchctl load -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
-alias postgres_unload="launchctl unload -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
+# alias memcached_load="launchctl load -w /usr/local/Cellar/memcached/1.4.13/homebrew.mxcl.memcached.plist"
+# alias memcached_unload="launchctl unload -w /usr/local/Cellar/memcached/1.4.13/homebrew.mxcl.memcached.plist"
+# alias mysql_load="launchctl load -w /usr/local/Cellar/mysql/5.5.20/homebrew.mxcl.mysql.plist"
+# alias mysql_unload="launchctl unload -w /usr/local/Cellar/mysql/5.5.20/homebrew.mxcl.mysql.plist"
+# alias postgres_load="launchctl load -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
+# alias postgres_unload="launchctl unload -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
 
 source ~/.git-completion.bash
 
@@ -26,6 +26,9 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export PS1='\n\u@\h:\w$(__git_ps1 " (%s)")\n\$ '
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
-eval "$(rbenv init -)"
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
