@@ -19,7 +19,13 @@ alias l='ls -alh'
 # alias postgres_load="launchctl load -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
 # alias postgres_unload="launchctl unload -w /usr/local/Cellar/postgresql/9.1.3/homebrew.mxcl.postgresql.plist"
 
+alias postgres_load="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias postgres_unload="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
 source ~/.git-completion.bash
+
+stty werase undef
+bind '"\C-w": backward-kill-word'
 
 export CLICOLOR=1
 export GIT_PS1_SHOWDIRTYSTATE=true
