@@ -6,5 +6,5 @@ cp files/gitignore_global ~/.gitignore_global
 cp files/irbrc ~/.irbrc
 cp files/pryrc ~/.pryrc
 
-source ~/.bash_profile
+# source ~/.bash_profile
 open files/idleToes.itermcolors
