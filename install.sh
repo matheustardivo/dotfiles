@@ -5,6 +5,7 @@ cp files/gitconfig ~/.gitconfig
 cp files/gitignore_global ~/.gitignore_global
 cp files/irbrc ~/.irbrc
 cp files/pryrc ~/.pryrc
+cp files/zshrc ~/.zshrc
 
 # source ~/.bash_profile
 open files/idleToes.itermcolors
