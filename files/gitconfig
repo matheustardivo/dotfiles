@@ -1,6 +1,6 @@
 [user]
-  name = Matheus Tardivo
-  email = matheustardivo@gmail.com
+	name = Matheus Tardivo
+	email = matheustardivo@gmail.com
 [core]
   pager = less -r
   editor = subl -w
@@ -28,3 +28,17 @@
   autosetuprebase = always
 [push]
   default = current
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+  summary = true
