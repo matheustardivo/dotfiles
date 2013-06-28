@@ -1,4 +1,4 @@
-cp files/Oblivion.tmTheme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Oblivion.tmTheme
+cp files/Morrowind.tmTheme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Morrowind.tmTheme
 cp files/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 cp files/bash_profile ~/.bash_profile
 cp files/gemrc ~/.gemrc
