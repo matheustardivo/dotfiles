@@ -1,3 +1,5 @@
+cp files/Oblivion.tmTheme ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Color\ Scheme\ -\ Default/Oblivion.tmTheme
+cp files/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
 cp files/bash_profile ~/.bash_profile
 cp files/gemrc ~/.gemrc
 cp files/git-completion.sh ~/.git-completion.sh
