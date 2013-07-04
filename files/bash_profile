@@ -21,6 +21,8 @@ alias l='ls -alh'
 
 alias postgres_load="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias postgres_unload="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias ruby_server="ruby -run -e httpd . -p5000"
+alias python_server="python -m SimpleHTTPServer 5000"
 
 source ~/.git-completion.sh
 source ~/.git-prompt.sh
