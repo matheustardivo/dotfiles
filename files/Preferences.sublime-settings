@@ -2,10 +2,11 @@
   "color_scheme": "Packages/Color Scheme - Default/Morrowind.tmTheme",
   "draw_white_space": "all",
   "ensure_newline_at_eof_on_save": true,
-  "font_face": "Bitstream Vera Sans Mono",
-  "font_size": 13.0,
+  "font_face": "Monaco",
+  "font_size": 16.0,
   "ignored_packages":
   [
+    "Markdown",
     "Vintage"
   ],
   "tab_size": 2,
