@@ -3,8 +3,8 @@
 	email = matheustardivo@gmail.com
 [core]
   pager = less -r
-  editor = subl -w
-  excludesfile = /Users/mtardivo/.gitignore_global
+  editor = atom --wait
+  excludesfile = /Users/mttardi/.gitignore_global
 [color]
   diff = auto
   status = auto
@@ -22,6 +22,8 @@
   sb = status -sb
   dw = diff --word-diff
   ls = diff HEAD~1..HEAD
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lastweek = log --author=Matheus --pretty=oneline --all --abbrev-commit --since=7.day
 [help]
   autocorrect = 1
 [branch]
@@ -41,4 +43,3 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
-  summary = true
