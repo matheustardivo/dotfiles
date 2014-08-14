@@ -4,12 +4,14 @@
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+# export NLS_LANG=en_US.UTF-8
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
 alias l='ls -alh'
 
 # alias start_mongod='mongod -f /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
-# alias start_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq start'
-# alias stop_activemq='/Users/mtardivo/code/java/apache-activemq-5.5.1/bin/activemq stop'
+# alias start_activemq='/Users/mttardi/code/java/apache-activemq-5.5.1/bin/activemq start'
+# alias stop_activemq='/Users/mttardi/code/java/apache-activemq-5.5.1/bin/activemq stop'
 # alias start_http='python -m SimpleHTTPServer 8000'
 
 # alias memcached_load="launchctl load -w /usr/local/Cellar/memcached/1.4.13/homebrew.mxcl.memcached.plist"
@@ -24,8 +26,9 @@ alias postgres_unload="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias ruby_server="ruby -run -e httpd . -p5000"
 alias python_server="python -m SimpleHTTPServer 5000"
 
-source ~/.git-completion.sh
-source ~/.git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source ~/.bundler-exec.sh
 
 stty werase undef
 bind '"\C-w": backward-kill-word'
@@ -36,10 +39,27 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-export PS1='\n\u@\h:\w$(__git_ps1 " (%s)")\n\$ '
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+# rbenv version | sed -e 's/ .*//'
+__rbenv_ps1 ()
+{
+  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+  printf $rbenv_ruby_version
+}
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+__rbenv_gemset () 
+{
+  if [ -f .rbenv-gemsets ]; then 
+    echo "@$(cat .rbenv-gemsets)"; 
+  fi
+}
+
+export PS1='\n($(__rbenv_ps1)$(__rbenv_gemset)) \u@\h:\w$(__git_ps1 " (%s)")\n\$ '
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:$PATH
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2
+export TNS_ADMIN=/opt/oracle/instantclient_11_2/network/admin
 
 if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
