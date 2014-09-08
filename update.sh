@@ -1,9 +1,0 @@
-cp ~/.bash_profile files/bash_profile
-cp ~/.gemrc files/gemrc
-cp ~/.git-completion.sh files/git-completion.sh
-cp ~/.git-prompt.sh files/git-prompt.sh
-cp ~/.gitconfig files/gitconfig
-cp ~/.gitignore_global files/gitignore_global
-cp ~/.irbrc files/irbrc
-cp ~/.pryrc files/pryrc
-cp ~/.zshrc files/zshrc
