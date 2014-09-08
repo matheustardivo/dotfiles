@@ -1,0 +1,40 @@
+# Unix
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls -Alh'
+
+# Bundler
+alias b="bundle"
+
+# Tests and Specs
+alias t="ruby -I test"
+alias cuc="bundle exec cucumber"
+
+# Rubygems
+alias gi="gem install"
+alias giv="gem install -v"
+
+# Rails
+alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
+
+# tmux
+alias tn='tmux switch -n'
+alias tp='tmux switch -p'
+
+# Shortcuts
+alias g='git'
+alias fresh_schema='rm db/schema.rb && rake db:drop:all && rake db:create && rake db:migrate && rake db:test:prepare'
+alias rbp='rails_best_practices -f html . --output-file public/rbp.html'
+alias sp='spin push'
+alias spr='sp push rspec'
+alias ss='spin serve'
+alias be='bundle exec'
+alias spa='sp spec'
+alias build_ctags='ctags -R -f ./.git/tags .'
+
+# HTTP Servers
+alias ruby_server="ruby -run -e httpd . -p5000"
+alias python_server="python -m SimpleHTTPServer 5000"
+

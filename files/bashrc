@@ -1,0 +1,65 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+# export NLS_LANG=en_US.UTF-8
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
+
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source ~/.bundler-exec.sh
+
+stty werase undef
+bind '"\C-w": backward-kill-word'
+
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM="auto"
+
+# Colors
+color_off='\e[0m' # Text Reset
+black='\e[0;30m' # Black
+bright_black='\e[1;30m' # Black
+red='\e[0;31m' # Red
+green='\e[0;32m' # Green
+yellow='\e[0;33m' # Yellow
+blue='\e[0;34m' # Blue
+purple='\e[0;35m' # Purple
+cyan='\e[0;36m' # Cyan
+white='\e[0;37m' # White
+
+# Tell things to be colourful
+export CLICOLOR=1
+export GREP_COLOR="1;31"
+export GREP_OPTIONS='--color=auto'
+export LESS="-R"
+export TERM=xterm-256color
+
+# Oversized history
+export HISTSIZE=5000
+
+__rbenv_ps1 ()
+{
+  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+  printf $rbenv_ruby_version
+}
+
+__rbenv_gemset () 
+{
+  if [ -f .rbenv-gemsets ]; then 
+    echo "@$(cat .rbenv-gemsets)"; 
+  fi
+}
+
+export PS1='\n($(__rbenv_ps1)$(__rbenv_gemset)) \u@\h:\w$(__git_ps1 " (%s)")\n\$ '
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+
+# Call Aliases
+source ~/.aliases
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi

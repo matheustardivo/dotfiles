@@ -1,10 +1,10 @@
 [user]
-	name = Matheus Tardivo
-	email = matheustardivo@gmail.com
+  name = Matheus Tardivo
+  email = matheustardivo@gmail.com
 [core]
-  pager = less -r
+  autocrlf = false
   editor = atom --wait
-  excludesfile = /Users/mttardi/.gitignore_global
+  excludesfile = ~/.gitignore
 [color]
   diff = auto
   status = auto
@@ -31,15 +31,15 @@
 [push]
   default = current
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [difftool]
-	prompt = false
+  prompt = false
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [mergetool]
-	prompt = false
+  prompt = false
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
