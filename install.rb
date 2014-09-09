@@ -20,5 +20,5 @@ dotfiles.children.each do |dotfile|
   dotfile_backup(dotfile) if File.exist?(dotfile_path(dotfile))
 
   # Symlink the dotfile to ~/.dotfile
-  File.symlink dotfile.to_s, File.expand_path('~') + "/.#{dotfile.basename}"
+  File.symlink dotfile.to_s, dotfile_path(dotfile)
 end
