@@ -1,11 +1,7 @@
 # matheustardivo's dotfiles
 
 ## Install instructions
-(TODO: I need to create a new install script, and maybe think about create symlinks instead of copying files)
 
-Just run `./install.sh`
+Just run `./install.rb`
 
-This will copy all the files in `files` folder to the appropriate locations
-
-## Configuration
-You should change the files `~/.bashrc` and `~/.gitconfig` to your settings.
+This will create symlink to all dotfiles in your home folder
