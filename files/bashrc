@@ -2,6 +2,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export NLS_LANG=en_US.UTF-8
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
+# Oracle Instant Client
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2
+export TNS_ADMIN=/opt/oracle/instantclient_11_2/network/admin
 
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
@@ -51,7 +54,7 @@ __rbenv_gemset ()
 }
 
 export PS1='\n($(__rbenv_ps1)$(__rbenv_gemset)) \u@\h:\w$(__git_ps1 " (%s)")\n\$ '
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:$PATH
 
 # Call Aliases
 source ~/.aliases
