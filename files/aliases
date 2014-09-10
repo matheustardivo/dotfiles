@@ -37,5 +37,3 @@ alias build_ctags='ctags -R -f ./.git/tags .'
 # HTTP Servers
 alias ruby_server="ruby -run -e httpd . -p5000"
 alias python_server="python -m SimpleHTTPServer 5000"
-
-alias sqlplus='rlwrap sqlplus'
