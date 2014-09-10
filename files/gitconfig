@@ -3,7 +3,7 @@
   email = matheustardivo@gmail.com
 [core]
   autocrlf = false
-  editor = atom --wait
+  editor = vim -f
   excludesfile = ~/.gitignore
 [color]
   diff = auto
