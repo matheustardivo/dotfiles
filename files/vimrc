@@ -67,6 +67,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 set guifont=Monaco:h16
+" set guifont=PowerlineSymbols:h16
 set encoding=utf-8
 let mapleader=','
 
@@ -94,10 +95,10 @@ set smartcase
 " Show line numbers
 set nu
 
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
 
 set autoread
 set hidden
@@ -138,7 +139,7 @@ let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_enable_branch=1
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 
 " eliminate truncation
 let g:airline#extensions#default#section_truncate_width = { }
