@@ -13,28 +13,28 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
 Plugin 'briancollins/vim-jst'
 Plugin 'evanmiller/nginx-vim-syntax'
-Plugin 'garbas/vim-snipmate.git'
-Plugin 'groenewege/vim-less.git'
-Plugin 'honza/vim-snippets'
+" Plugin 'garbas/vim-snipmate.git'
+" Plugin 'groenewege/vim-less.git'
+" Plugin 'honza/vim-snippets'
 Plugin 'itspriddle/vim-jquery.git'
 Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/gist-vim'
+" Plugin 'mattn/gist-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise.git'
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-ragtag'
@@ -62,6 +62,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
 syntax enable
 set background=dark
@@ -95,10 +96,10 @@ set smartcase
 " Show line numbers
 set nu
 
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
+" nnoremap <Left> <Nop>
+" nnoremap <Right> <Nop>
+" nnoremap <Up> <Nop>
+" nnoremap <Down> <Nop>
 
 set autoread
 set hidden
@@ -125,24 +126,24 @@ nmap <leader>bl :ls<CR>
 
 " vim-airline
 " the separator used on the left side >
-let g:airline_left_sep = ''
+" let g:airline_left_sep = ''
 
 " the separator used on the right side >
-let g:airline_right_sep=''
+" let g:airline_right_sep=''
 
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#fnamemod=':t'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline_detect_modified=1
-let g:airline_detect_paste=1
-let g:airline_enable_branch=1
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#fnamemod=':t'
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = ''
+" let g:airline#extensions#tabline#right_sep = ''
+" let g:airline#extensions#tabline#right_alt_sep = ''
+" let g:airline_detect_modified=1
+" let g:airline_detect_paste=1
+" let g:airline_enable_branch=1
 " let g:airline_powerline_fonts=1
 
 " eliminate truncation
-let g:airline#extensions#default#section_truncate_width = { }
+" let g:airline#extensions#default#section_truncate_width = { }
 
 " CtrlP
 " CtrlP for fuzzy finding
@@ -159,13 +160,13 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " NERDTree
-let NERDTreeMinimalUI=1
-let NERDTreeDirArrows=1
-let NERDTreeChDirMode=2
-let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeWinSize=30
+" let NERDTreeMinimalUI=1
+" let NERDTreeDirArrows=1
+" let NERDTreeChDirMode=2
+" let NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+" let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+" let g:nerdtree_tabs_focus_on_files=1
+" let g:NERDTreeWinSize=30
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 
@@ -174,6 +175,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nmap <silent> // :nohlsearch<CR>
 
 " File browser
-nmap <silent> ,n :NERDTreeToggle<CR>
-nmap <silent> ,f :NERDTreeFind<CR>
+" nmap <silent> ,n :NERDTreeToggle<CR>
+" nmap <silent> ,f :NERDTreeFind<CR>
 

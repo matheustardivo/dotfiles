@@ -54,7 +54,7 @@ __rbenv_gemset ()
 }
 
 export PS1='\n($(__rbenv_ps1)$(__rbenv_gemset)) \u@\h:\w$(__git_ps1 " (%s)")\n\$ '
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:/Users/mttardi/code/java/apache-jmeter-2.12/bin:$PATH
 
 # Call Aliases
 source ~/.aliases
@@ -66,3 +66,6 @@ if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mttardi/.gvm/bin/gvm-init.sh" ]] && source "/Users/mttardi/.gvm/bin/gvm-init.sh"
