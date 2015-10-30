@@ -24,8 +24,8 @@
   ls = diff HEAD~1..HEAD
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lastweek = log --author=Matheus --pretty=oneline --all --abbrev-commit --since=7.day
-  cleanup-local = git branch --merged | grep -v "\\*" | grep -v master | xargs -n 1 git branch -d
-  cleanup-remote = git remote prune origin
+  cleanup-local = branch --merged | grep -v "\\*" | grep -v master | xargs -n 1 git branch -d
+  cleanup-remote = remote prune origin
 [help]
   autocorrect = 1
 [branch]
