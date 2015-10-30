@@ -9,6 +9,7 @@ export TNS_ADMIN=/opt/oracle/instantclient_11_2/network/admin
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source ~/.bundler-exec.sh
+source ~/.gvm/springboot/current/shell-completion/bash/spring
 
 stty werase undef
 bind '"\C-w": backward-kill-word'
@@ -17,6 +18,10 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/mttardi/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 # Colors
 color_off='\e[0m' # Text Reset
@@ -69,3 +74,6 @@ fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mttardi/.gvm/bin/gvm-init.sh" ]] && source "/Users/mttardi/.gvm/bin/gvm-init.sh"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
