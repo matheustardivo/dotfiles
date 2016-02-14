@@ -9,7 +9,7 @@ export TNS_ADMIN=/opt/oracle/instantclient_11_2/network/admin
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source ~/.bundler-exec.sh
-source ~/.gvm/springboot/current/shell-completion/bash/spring
+source ~/.sdkman/springboot/current/shell-completion/bash/spring
 
 stty werase undef
 bind '"\C-w": backward-kill-word'
@@ -19,9 +19,10 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/mttardi/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/mttardi/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
 
 # Colors
 color_off='\e[0m' # Text Reset
@@ -59,7 +60,7 @@ __rbenv_gemset ()
 }
 
 export PS1='\n($(__rbenv_ps1)$(__rbenv_gemset)) \u@\h:\w$(__git_ps1 " (%s)")\n\$ '
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:/Users/mttardi/code/java/apache-jmeter-2.12/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/opt/oracle/instantclient_11_2:/Users/mttardi/code/java/apache-jmeter-2.12/bin:/Users/mttardi/code/scala/scala-2.11.7/bin:$PATH
 
 # Call Aliases
 source ~/.aliases
@@ -72,8 +73,11 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/mttardi/.gvm/bin/gvm-init.sh" ]] && source "/Users/mttardi/.gvm/bin/gvm-init.sh"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export NVM_DIR="/Users/mttardi/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "/Users/mttardi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mttardi/.sdkman/bin/sdkman-init.sh"
