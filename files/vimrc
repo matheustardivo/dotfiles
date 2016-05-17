@@ -67,6 +67,9 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
 syntax enable
 set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termcolors = 16
 colorscheme solarized
 set guifont=Monaco:h16
 " set guifont=PowerlineSymbols:h16
